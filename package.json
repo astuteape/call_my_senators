@@ -1,0 +1,27 @@
+{
+  "name": "myrep",
+  "version": "0.1.0",
+  "description": "Text your address to receive the public contact information for your elected representatives",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-file dist/app.js"
+  },
+  "keywords": [
+    "Twilio",
+    "ProPublica",
+    "Congress",
+    "Democracy"
+  ],
+  "author": "Wade Christensen",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "twilio": "^3.28.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "dotenv": "^6.2.0"
+  }
+}
