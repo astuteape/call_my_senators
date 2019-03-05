@@ -16,8 +16,5 @@ exports.handler = function(context, event, callback) {
     })
     .catch(error => {
       console.error(error);
-      twiml.message(
-        "Sorry, something went wrong. Please be sure to send a valid two-character U.S. state abbreviation."
-      );
     });
 };
