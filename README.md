@@ -6,7 +6,7 @@ Send an SMS with any two-character USPS state abbreviation to (503) 210-5156. My
 
 ### For example
 
-![Example Text](./myrep_example.jpg);
+![Example Text](./myrep_example.jpg)
 
 ## Why?
 
