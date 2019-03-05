@@ -15,11 +15,15 @@ const getSenatorIDs = state => {
       "X-API-KEY": process.env.PROPUBLICA_API_KEY
     },
     withCredentials: false
-  }).then(response => {
-    const senatorOne = response.data.results[0].id;
-    const senatorTwo = response.data.results[1].id;
-    return [senatorOne, senatorTwo];
-  });
+  })
+    .then(response => {
+      const senatorOne = response.data.results[0].id;
+      const senatorTwo = response.data.results[1].id;
+      return [senatorOne, senatorTwo];
+    })
+    .catch(error => {
+      console.error(error);
+    });
 };
 
 module.exports = getSenatorIDs;

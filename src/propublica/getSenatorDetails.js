@@ -14,11 +14,15 @@ const getSenatorDetails = memberID => {
       "X-API-KEY": process.env.PROPUBLICA_API_KEY
     },
     withCredentials: false
-  }).then(response => {
-    return `U.S. Senator: ${response.data.results[0].first_name} ${
-      response.data.results[0].last_name
-    } | Public Phone: ${response.data.results[0].roles[0].phone}`;
-  });
+  })
+    .then(response => {
+      return `U.S. Senator: ${response.data.results[0].first_name} ${
+        response.data.results[0].last_name
+      } | Public Phone: ${response.data.results[0].roles[0].phone}`;
+    })
+    .catch(error => {
+      console.error(error);
+    });
 };
 
 module.exports = getSenatorDetails;

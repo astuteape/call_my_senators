@@ -10,7 +10,8 @@ const inputValidator = input => {
   if (regex.test(trimmedInput)) {
     return trimmedInput.toLowerCase();
   } else {
-    return input;
+    // Should throw an error
+    return false;
   }
 };
 
